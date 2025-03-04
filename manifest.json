@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Dark Mode Extension",
+    "version": "1.0",
+    "description": "모든 페이지에서 다크모드 적용 (이미지 처리 포함)",
+    "permissions": [],
+    "host_permissions": [
+      "<all_urls>"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["popup.js"],
+        "run_at": "document_idle"
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    }
+  }
+  
